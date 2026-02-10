@@ -1,0 +1,183 @@
+{
+    "nav": [
+      {
+        "kind": "experience",
+        "ref": "exp_1",
+        "label": "Team Lead, Product Management",
+        "meta": {
+          "left": ["2023 - Present", "Full Time"],
+          "right": ["2.5 Yrs", "Remote, BC, Canada"]
+        }
+      },
+      {
+        "kind": "experience",
+        "ref": "exp_2",
+        "label": "Job 2",
+        "meta": {
+          "left": ["2023 - Present", "Full Time"],
+          "right": ["Remote, BC, Canada"]
+        }
+      },
+      {
+        "kind": "experience",
+        "ref": "exp_3",
+        "label": "Job 3",
+        "meta": {
+          "left": ["2023 - Present", "Full Time"],
+          "right": ["2.5 Yrs", "Remote, BC, Canada"]
+        }
+      },
+      {
+        "kind": "experience",
+        "ref": "exp_4",
+        "label": "Job 4",
+        "meta": {
+          "left": ["2023 - Present", "Full Time"],
+          "right": ["2.5 Yrs", "Remote, BC, Canada"]
+        }
+      },
+      {
+        "kind": "experience",
+        "ref": "exp_5",
+        "label": "Job 5",
+        "meta": {
+          "left": ["2023 - Present", "Full Time"],
+          "right": ["2.5 Yrs", "Remote, BC, Canada"]
+        }
+      },
+      {
+        "kind": "education",
+        "ref": "edu_1",
+        "label": "University of Toronto",
+        "meta": {
+          "left": ["Statistics & Computer Science"]
+        }
+      },
+      {
+        "kind": "skills",
+        "ref": "skills_engineering",
+        "label": "Engineering Skills"
+      },
+      {
+        "kind": "skills",
+        "ref": "skills_product_design",
+        "label": "Product / Design Skills"
+      },
+      {
+        "kind": "skills",
+        "ref": "skills_seo",
+        "label": "SEO"
+      },
+      {
+        "kind": "skills",
+        "ref": "skills_languages",
+        "label": "Languages"
+      }
+    ],
+    "content": {
+      "experience": {
+        "exp_1": {
+          "title": "Team Lead, Product Management",
+          "location": "Remote, BC, Canada",
+          "dateRange": "2023 - Present",
+          "employmentType": "Full Time",
+          "blocks": [
+            {
+              "type": "bullets",
+              "title": "Achievements",
+              "items": ["Achievement 1", "Achievement 2", "Achievement 3", "Achievement 4", "Achievement 5"]
+            },
+            {
+              "type": "bullets",
+              "title": "Responsibilities",
+              "items": ["Responsibility 1", "Responsibility 2", "Responsibility 3"]
+            }
+          ]
+        },
+        "exp_2": {
+          "title": "Job 2",
+          "location": "Remote, BC, Canada",
+          "dateRange": "2023 - Present",
+          "employmentType": "Full Time",
+          "blocks": [
+            {
+              "type": "bullets",
+              "title": "Achievements",
+              "items": ["Achievement 1", "Achievement 2", "Achievement 3", "Achievement 4", "Achievement 5"]
+            },
+            {
+              "type": "bullets",
+              "title": "Responsibilities",
+              "items": ["Responsibility 1", "Responsibility 2", "Responsibility 3"]
+            }
+          ]
+        },
+        "exp_3": {
+          "title": "Job 3",
+          "location": "Remote, BC, Canada",
+          "dateRange": "2023 - Present",
+          "employmentType": "Full Time",
+          "blocks": []
+        },
+        "exp_4": {
+          "title": "Job 4",
+          "location": "Remote, BC, Canada",
+          "dateRange": "2023 - Present",
+          "employmentType": "Full Time",
+          "blocks": []
+        },
+        "exp_5": {
+          "title": "Job 5",
+          "location": "Remote, BC, Canada",
+          "dateRange": "2023 - Present",
+          "employmentType": "Full Time",
+          "blocks": []
+        }
+      },
+      "education": {
+        "edu_1": {
+          "school": "University of Toronto",
+          "program": "Statistics & Computer Science"
+        }
+      },
+      "skills": {
+        "skills_engineering": {
+          "groups": [
+            {
+              "label": "Frontend",
+              "items": ["CFF Explorer", "Code Analysis", "Computer Security", "Debuggers", "Disassemblers", "ELF", "GDB", "General-purpose programming", "Ghidra", "IDA Pro", "Network Protocols", "Network Security", "Obfuscated code", "Obfuscated code analysis", "Packed code analysis", "PE-COFF", "Reverse Engineering", "Security Assessments", "Security Engineering", "Security Protocols", "Sysinternals", "Threat modeling", "Windbg", "Wireshark", "X64dbg", "X86 Assembly"]
+            },
+            {
+              "label": "Backend",
+              "items": ["Skill C", "Skill D", "Skill E", "Skill F"]
+            }
+          ]
+        },
+        "skills_product_design": {
+          "groups": [
+            {
+              "label": "Core",
+              "items": ["Skill A", "Skill B", "Skill C"]
+            }
+          ]
+        },
+        "skills_seo": {
+          "groups": [
+            {
+              "label": "Core",
+              "items": ["Skill A", "Skill B"]
+            }
+          ]
+        },
+        "skills_languages": {
+          "groups": [
+            {
+              "label": "Spoken",
+              "items": ["English", "Chinese"]
+            }
+          ]
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,9 @@
+export default function ContactPage() {
+  return (
+    <div className="p-8">
+      <h1 className="text-2xl font-bold dark:text-white text-black mb-4">Contact</h1>
+      <p className="dark:text-brand-secondary text-black/70">Contact information will be displayed here.</p>
+    </div>
+  )
+}
+

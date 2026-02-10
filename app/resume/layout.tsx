@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import resumeData from "@/data/resume.json";
+import { ResumeSidebarNav } from "@/components/resume/ResumeSidebarNav";
+
+export const metadata: Metadata = {
+  title: "Peter Meng - Product Management Leader | AI, Platform, Growth, E-commerce",
+  description:
+    "Product leader with 8+ years across AI, platform, growth, e-commerce, and full-stack delivery. I translate strategy into shipped products and scalable systems.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div className="flex items-start w-full h-full">
+      <div className="max-w-130 xl:max-w-160 w-full border-r border-brand-border h-full">
+        {/* title */}
+        <h2 className="inline capitalize text-black dark:text-white text-lg font-bold p-1 border-r border-brand-border">
+          resume
+        </h2>
+        {/* JSON driven resume nav */}
+        <div className="flex-1">
+          <ResumeSidebarNav nav={resumeData.nav as any} />
+        </div>
+
+        <div className="border-t border-brand-border w-full p-1">
+          <p className="dark:text-brand-secondary/75 text-black text-xs font-bold">
+            Click{" "}
+            <Link href={"#"} className="text-brand-blue">
+              Here
+            </Link>{" "}
+            to Download the PDF Version
+          </p>
+        </div>
+
+      </div>
+
+      {/* content */}
+      <div className="flex-1 h-full overflow-y-auto border-l border-brand-border">
+        {children}
+      </div>
+    </div>
+  );
+}
