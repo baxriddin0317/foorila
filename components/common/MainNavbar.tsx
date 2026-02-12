@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AreaChart, Area, ResponsiveContainer } from 'recharts'
@@ -85,7 +85,8 @@ const PerformanceMetric = ({
 
 const MainNavbar = () => {
   const pathname = usePathname()
-  
+  const [timestamp, setTimestamp] = useState<string>('')
+
   const navItems = [
     { label: 'Blog Posts', href: '/blog' },
     { label: 'About Me', href: '/about' },
@@ -131,6 +132,10 @@ const MainNavbar = () => {
     return `${year}:${month}:${day}:${hours}:${minutes}:${seconds}`
   }
 
+  useEffect(() => {
+    setTimestamp(formatTimestamp())
+  }, [])
+
   return (
     <nav className="max-w-30 md:max-w-40 lg:max-w-70 xl:max-w-[320px]  flex flex-col h-[calc(100vh-30px)] w-full border-r border-brand-border bg-white dark:bg-black">
       {/* Navigation Links */}
@@ -170,7 +175,7 @@ const MainNavbar = () => {
       {/* Last Deploy Timestamp */}
       <div className="p-1">
         <p className="text-[11px] dark:text-brand-secondary/75 text-black">
-          <span className='font-bold text-xs'>Last Deploy Timestamp:</span> {formatTimestamp()}
+          <span className='font-bold text-xs'>Last Deploy Timestamp:</span> {timestamp}
         </p>
       </div>
 

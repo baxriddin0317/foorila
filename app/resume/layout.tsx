@@ -27,7 +27,7 @@ export default function RootLayout({
         </div>
 
         <div className="border-t border-brand-border w-full p-1">
-          <p className="dark:text-brand-secondary/75 text-black text-xs font-bold">
+          <p className="dark:text-brand-secondary/75 text-black/75 text-xs font-bold">
             Click{" "}
             <Link href={"#"} className="text-brand-blue">
               Here

@@ -21,7 +21,7 @@ export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
   const pathname = usePathname();
   const currentRef =
     pathname?.split("/").filter(Boolean).slice(-1)[0] ?? nav[0]?.ref;
-
+  console.log('nav:', nav);
   return (
     <nav className="w-full text-xs">
       <ul className="divide-y divide-brand-border border-t border-brand-border">
@@ -33,28 +33,32 @@ export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
               <Link
                 href={`/resume/${item.ref}`}
                 scroll={false}
-                className={`block p-1 ${
+                className={`flex items-stretch h-11 justify-between px-1 py-0.5 ${
                   isActive
-                    ? " text-brand-blue"
-                    : "dark:text-brand-secondary text-black"
+                    ? " bg-brand-blue text-white"
+                    : "text-black dark:text-white"
                 }`}
               >
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="font-bold truncate">{item.label}</span>
-                  {item.meta?.right && item.meta.right.length > 0 && (
-                    <span className="flex flex-col items-end text-[10px] leading-tight text-brand-secondary">
-                      {item.meta.right.map((m) => (
-                        <span key={m}>{m}</span>
+                <div className="flex flex-col items-baseline justify-between">
+                  <span className="text-[13px] block leading-6 truncate">{item.label}</span>
+                  {item.meta?.left && item.meta.left.length > 0 ? (
+                    <div className={`flex flex-wrap gap-x-1 text-xs leading-tight dark:text-brand-secondary/75 ${!isActive ? 'text-black/75' : 'text-white'} `}>
+                      {item.meta.left.map((m) => (
+                        <span key={m}>[{m}]</span>
                       ))}
-                    </span>
+                    </div>
+                  ) : (
+                    <div className={`flex flex-wrap gap-x-1 text-xs leading-tight dark:text-brand-secondary/75 ${!isActive ? 'text-black/75' : 'text-white'} `}>
+                      <span>[Expand]</span>
+                    </div>
                   )}
                 </div>
-                {item.meta?.left && item.meta.left.length > 0 && (
-                  <div className="mt-0.5 flex flex-wrap gap-x-2 text-[10px] leading-tight text-brand-secondary">
-                    {item.meta.left.map((m) => (
+                {item.meta?.right && item.meta.right.length > 0 && (
+                  <span className={`flex flex-col items-end justify-between text-xs leading-tight dark:text-brand-secondary/75 ${!isActive ? 'text-black/75' : 'text-white'} `}>
+                    {item.meta.right.map((m) => (
                       <span key={m}>{m}</span>
                     ))}
-                  </div>
+                  </span>
                 )}
               </Link>
             </li>

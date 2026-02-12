@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-black" suppressHydrationWarning>
         <Providers>
           <div className="flex flex-col h-screen overflow-hidden">
             <Header />
