@@ -19,9 +19,8 @@ type Props = {
 
 export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
   const pathname = usePathname();
-  const currentRef =
-    pathname?.split("/").filter(Boolean).slice(-1)[0] ?? nav[0]?.ref;
-  console.log('nav:', nav);
+  const currentRef = pathname?.split("/").filter(Boolean).slice(-1)[0] ?? nav[0]?.ref;
+  
   return (
     <nav className="w-full text-xs">
       <ul className="divide-y divide-brand-border border-t border-brand-border">
@@ -38,6 +37,10 @@ export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
                     ? " bg-brand-blue text-white"
                     : "text-black dark:text-white"
                 }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.history.pushState(null, '', `/resume/${item.ref}`);                  
+                }}
               >
                 <div className="flex flex-col items-baseline justify-between">
                   <span className="text-[13px] block leading-6 truncate">{item.label}</span>

@@ -75,8 +75,6 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
   
     isUserScrolling.current = false;
   
-    // To'g'ridan-to'g'ri element pozitsiyasiga scroll qilish
-    // containerRect kerak emas, faqat element offsetTop ishlatamiz
     const targetScrollTop = articleElement.offsetTop - 30;
   
     scrollContainer.scrollTo({
@@ -123,11 +121,20 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
           let minTop = Infinity;
 
           intersectingElements.forEach((top, id) => {
-            if (top < minTop) {
+            if (top <= 50 && top < minTop) {
               minTop = top;
               topMostId = id;
             }
           });
+
+          if (!topMostId) {
+            intersectingElements.forEach((top, id) => {
+              if (top < minTop) {
+                minTop = top;
+                topMostId = id;
+              }
+            });
+          }
 
           if (topMostId && topMostId !== currentActiveRef.current) {
             currentActiveRef.current = topMostId;
@@ -142,11 +149,10 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
       {
         root: scrollContainerRef.current,
         rootMargin: "-30px 0px -50% 0px",
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
       }
     );
 
-    // Barcha article elementlarni observe qilish
     articleRefs.current.forEach((element) => {
       observer.observe(element);
     });
@@ -157,7 +163,6 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
     };
   }, [pathname, router, nav, data]);
 
-  // Find valid items that will actually render
   const validItems = nav.filter((item) => {
     if (item.kind === "experience") {
       return !!data.content.experience[item.ref];
