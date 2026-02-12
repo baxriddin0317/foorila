@@ -141,7 +141,10 @@ const MainNavbar = () => {
       {/* Navigation Links */}
       <div className="flex flex-col border-b border-brand-border">
         {navItems.map((item, index) => {
-          const isActive = pathname === item.href || (item.href === '/blog' && pathname === '/')
+          const isActive = item.href === '/blog'
+              ? (pathname === '/' || pathname.startsWith('/blog'))
+              : (pathname === item.href || pathname.startsWith(item.href + '/'))
+
           return (
             <Link
               key={item.href}
