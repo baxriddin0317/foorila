@@ -211,7 +211,7 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
                     }}
                     className="border-b border-brand-border"
                 >
-                    <h3 className="text-lg font-bold text-white border-b border-brand-border px-1">
+                    <h3 className="text-lg font-bold text-black dark:text-white border-b border-brand-border px-1">
                     {exp.title}
                     </h3>
 
@@ -239,7 +239,7 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
                             )}
                             <div>
                               {block.items.map((it) => (
-                                <p key={it} className="text-black dark:text-brand-secondary">{block.title === "Achievements" ? '* ' : '- '} &nbsp;{it}</p>
+                                <p key={it} className="text-black/75 dark:text-brand-secondary/75">{block.title === "Achievements" ? '* ' : '- '} &nbsp;{it}</p>
                               ))}
                             </div>
                           </div>
@@ -265,15 +265,15 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
                     }}
                     className="border-b border-brand-border"
                 >
-                    <h3 className="text-lg font-bold text-white mb-1 border-b border-brand-border px-1">
+                    <h3 className="text-lg font-bold text-black dark:text-white mb-1 border-b border-brand-border px-1">
                       Education
                     </h3>
                     <div className="px-1 pb-1">
-                      <h3 className="text-[13px] font-bold text-white">
+                      <h3 className="text-[13px] font-bold text-black dark:text-white">
                         {edu.school}
                       </h3>
                       {edu.program && (
-                        <p className="mt-1 text-[13px] text-brand-secondary">
+                        <p className="mt-1 text-[13px] text-black/75 dark:text-brand-secondary/75">
                           [{edu.program}]
                         </p>
                       )}
@@ -298,13 +298,13 @@ export const ResumeContent: React.FC<Props> = ({ data, nav, initialRef }) => {
                     }}
                     className="border-b border-brand-border"
                 >
-                    <h3 className="text-lg font-bold text-white border-b border-brand-border px-1">
+                    <h3 className="text-lg font-bold text-black dark:text-white border-b border-brand-border px-1">
                     {item.label}
                     </h3>
                     <div className="mt-2 space-y-2 px-1 pb-1">
                     {skills.groups.map((group) => (
                         <div key={group.label}>
-                          <p className="text-[13px] font-bold text-white">
+                          <p className="text-[13px] font-bold text-black dark:text-white">
                               {group.label}
                           </p>
                           <p className="space-x-0.5 text-[13px] leading-snug">
