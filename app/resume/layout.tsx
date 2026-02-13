@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import resumeData from "@/data/resume.json";
 import { ResumeSidebarNav } from "@/components/resume/ResumeSidebarNav";
+import Title from "@/components/Title";
 
 export const metadata: Metadata = {
   title: "Peter Meng - Product Management Leader | AI, Platform, Growth, E-commerce",
@@ -9,18 +10,16 @@ export const metadata: Metadata = {
     "Product leader with 8+ years across AI, platform, growth, e-commerce, and full-stack delivery. I translate strategy into shipped products and scalable systems.",
 };
 
-export default function RootLayout({
+export default function ResumeLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <div className="flex items-start w-full h-full">
-      <div className="max-w-130 xl:max-w-160 w-full border-r border-brand-border h-full">
+      <div className="max-w-130 xl:max-w-160 w-full h-full">
         {/* title */}
-        <h2 className="inline capitalize text-black dark:text-white text-lg font-bold p-1 border-r border-brand-border">
-          resume
-        </h2>
+        <Title title="resume" />
         {/* JSON driven resume nav */}
         <div className="flex-1">
           <ResumeSidebarNav nav={resumeData.nav as any} />

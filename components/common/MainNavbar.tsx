@@ -184,8 +184,8 @@ const MainNavbar = () => {
 
       {/* Footer */}
       <div className='mt-auto border-t border-t-brand-border p-1 text-xs space-y-1'>
-        <p className='dark:text-brand-secondary/75 text-black/50'>v0.10.5 · Made with ☕ + ♥️</p>
-        <p className='flex gap-1 items-center dark:text-brand-secondary/75 text-black/50'>© 2026  <span className='text-black dark:text-white'>Peter Meng</span></p>
+        <p className='dark:text-brand-secondary/75 text-black/75'>v0.10.5 · Made with ☕ + ♥️</p>
+        <p className='flex gap-1 items-center dark:text-brand-secondary/75 text-black/75'>© 2026  <span className='text-black dark:text-white'>Peter Meng</span></p>
       </div>
     </nav>  
   )

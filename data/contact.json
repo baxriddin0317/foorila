@@ -1,0 +1,11 @@
+{
+  "headline": "Contact Me",
+  "subheadline": "Reach out for product leadership opportunities, consulting, or collaborations.",
+  "methods": [
+    { "type": "email", "label": "Email", "value": "your@email.com" },
+    { "type": "linkedin", "label": "LinkedIn", "value": "https://linkedin.com/in/your-handle" },
+    { "type": "github", "label": "GitHub", "value": "https://github.com/your-handle" }
+  ]
+}
+
+
