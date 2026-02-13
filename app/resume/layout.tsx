@@ -16,8 +16,8 @@ export default function ResumeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex items-start w-full h-full">
-      <div className="max-w-130 xl:max-w-160 w-full h-full">
+    <div className="grid lg:grid-cols-2 w-full h-full">
+      <div className="w-full h-screen overflow-y-auto">
         {/* title */}
         <Title title="resume" />
         {/* JSON driven resume nav */}
@@ -38,7 +38,7 @@ export default function ResumeLayout({
       </div>
 
       {/* content */}
-      <div className="flex-1 h-full overflow-y-auto border-l border-brand-border">
+      <div className="hidden lg:block flex-1 h-full overflow-y-auto border-l border-brand-border">
         {children}
       </div>
     </div>

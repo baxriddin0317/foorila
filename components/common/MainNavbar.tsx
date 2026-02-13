@@ -137,7 +137,7 @@ const MainNavbar = () => {
   }, [])
 
   return (
-    <nav className="max-w-30 md:max-w-40 lg:max-w-70 xl:max-w-[320px]  flex flex-col h-[calc(100vh-30px)] w-full border-r border-brand-border bg-white dark:bg-black">
+    <nav className="flex flex-col h-[calc(100vh-30px)] w-[40%] sm:w-[26%] lg:w-[22%] xl:w-[20%] border-r border-brand-border bg-white dark:bg-black">
       {/* Navigation Links */}
       <div className="flex flex-col border-b border-brand-border">
         {navItems.map((item, index) => {

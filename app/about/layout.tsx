@@ -14,13 +14,13 @@ export default function AboutLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex items-start w-full h-full">
-      <div className="max-w-130 xl:max-w-160 w-full h-full">
+    <div className="grid lg:grid-cols-2 w-full h-full">
+      <div className="w-full h-screen overflow-y-auto">
         {/* title */}
         <Title title={aboutData.headline} />
         {/* JSON driven about */}
         <div className="p-1 border-t border-brand-border">
-            <p className="text-sm text-black/75 dark:text-white leading-relaxed">
+            <p className="text-[10px] lg:text-sm text-black/75 dark:text-white leading-relaxed">
                 {aboutData.summary}
             </p>
         </div>
@@ -32,7 +32,7 @@ export default function AboutLayout({
                 {aboutData.highlights.map((highlight, index) => (
                   <p 
                     key={index}
-                    className="text-[13px] text-black/75 dark:text-brand-secondary/75"
+                    className="text-[10px] lg:text-[13px] text-black/75 dark:text-brand-secondary/75"
                   >
                     • &nbsp;{highlight}
                   </p>
@@ -42,7 +42,7 @@ export default function AboutLayout({
       </div>
 
       {/* content */}
-      <div className="flex-1 h-full overflow-y-auto border-l border-brand-border">
+      <div className="hidden lg:block flex-1 h-full overflow-y-auto border-l border-brand-border">
         {children}
       </div>
     </div>
