@@ -15,9 +15,10 @@ type ResumeNavItem = {
 
 type Props = {
   nav: ResumeNavItem[];
+  onItemClick?: (ref: string) => void;
 };
 
-export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
+export const ResumeSidebarNav: React.FC<Props> = ({ nav, onItemClick }) => {
   const pathname = usePathname();
   const currentRef = pathname?.split("/").filter(Boolean).slice(-1)[0] ?? nav[0]?.ref;
   
@@ -39,7 +40,10 @@ export const ResumeSidebarNav: React.FC<Props> = ({ nav }) => {
                 }`}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.history.pushState(null, '', `/resume/${item.ref}`);                  
+                  window.history.pushState(null, '', `/resume/${item.ref}`);
+                  if (onItemClick) {
+                    onItemClick(item.ref);
+                  }
                 }}
               >
                 <div className="flex flex-col items-baseline justify-between">

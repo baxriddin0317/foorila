@@ -69,10 +69,8 @@ const DonutAnimation: React.FC = () => {
   }, []);
 
   return (
-    <div className='flex justify-center font-mono border-t border-brand-border p-1' style={{fontFamily: "monospace"}}>
-      <div>
-        <pre className='text-black dark:text-white text-[10px] leading-2.5' ref={asciiRef}></pre>
-      </div>
+    <div className='flex justify-center font-mono border-t border-brand-border' style={{fontFamily: "monospace"}}>
+      <pre className='text-black dark:text-white text-[7px] sm:text-[10px] leading-[7px] sm:leading-2.5' ref={asciiRef}></pre>
     </div>
   );
 };
